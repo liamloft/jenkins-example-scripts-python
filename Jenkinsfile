@@ -11,7 +11,7 @@ pipeline {
         liam_token = credentials('LIAM_USERNAME')
       }
       steps {
-        sh 'python3 hello.py --$liam_token_USR --$liam_token_PSW'
+        sh 'python3 hello.py --username $liam_token_USR --password $liam_token_PSW'
       }
     }
   }
