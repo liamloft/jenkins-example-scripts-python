@@ -6,14 +6,14 @@ def main():
 
     # Add command line arguments
     parser.add_argument('--username', required=True, help='Your username')
-    parser.add_argument('--password', type=int, required=True, help='Your password')
+    parser.add_argument('--password', required=True, help='Your password')
 
     # Parse the command line arguments
     args = parser.parse_args()
 
     # Print the values of the parameters
-    print(f"Name: {args.username}")
-    print(f"Age: {args.password}")
+    print(f"Username: {args.username}")
+    print(f"Password: {args.password}")
 
 if __name__ == '__main__':
     main()
