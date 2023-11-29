@@ -7,8 +7,11 @@ pipeline {
       }
     }
     stage('hello') {
+      environment {
+        liam_token = credentials('LIAM_USERNAME')
+      }
       steps {
-        sh 'python3 hello.py'
+        sh 'python3 hello.py --$liam_token_USR --$liam_token_PSW'
       }
     }
   }
